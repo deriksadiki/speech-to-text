@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+  <ion-navbar color ={{status}}>
+    <ion-title >
       Ionic Blank
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<button ion-button (click)="start()">Speak</button>
+<ion-list *ngFor = "let i of matches">
+<p>{{i}}</p>
+</ion-list>
 </ion-content>
