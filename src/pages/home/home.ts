@@ -27,8 +27,8 @@ export class HomePage {
   }
 
   speak(){
-    if (this.matches[0] == 'hello'){
-      this.tts.speak('Hello Derik, How are you doing today?').then(() => 
+    if (this.matches[0] == 'Jarvis are you there'){
+      this.tts.speak('at your service sir, How are you doing today?').then(() => 
       console.log('Success')
     ).catch((reason: any) => console.log(reason));
     }
@@ -37,9 +37,21 @@ export class HomePage {
       this.tts.speak('i am also fine, so what can i help you with today?').then(() => 
       console.log('Success')
     ).catch((reason: any) => console.log(reason));
-    
     }
-
+    
+    else if (this.matches[0] == "perform system diagnosis"){
+      this.tts.speak('initializing system diagnosis.').then(() => 
+      {   
+         setTimeout(() => {
+        this.tts.speak(' system diagnosis completed');
+      }, 2000);
+      setTimeout(() => {
+        this.tts.speak(' system is online and ready');
+      }, 5000);
+      console.log('Success')}
+    ).catch((reason: any) => console.log(reason));
+    }
+    
   }
 
   start(){

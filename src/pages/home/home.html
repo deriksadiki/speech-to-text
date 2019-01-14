@@ -7,8 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-<button ion-button (click)="start()">Speak</button>
+  <div style="text-align: center">
+<button ion-button (click)="start()"  round>Speak</button>
 <ion-list *ngFor = "let i of matches">
 <p>{{i}}</p>
 </ion-list>
+</div>
 </ion-content>
